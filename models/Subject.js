@@ -33,7 +33,7 @@ Subject.init(
         },
         tutor_id: {
             type: DataTypes.INTEGER,
-            allowNull:false,
+            allowNull: true,
             references:{
                 model: "tutor",
                 key: 'id'
