@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS GetATutor_db;
+
+CREATE DATABASE GetATutor_db; 
+
+
