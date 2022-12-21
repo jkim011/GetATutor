@@ -26,6 +26,15 @@ Tutor.init({
             isEmail: true,
           },
     },
-})
+  
+},
+{
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'tutor',
+}
+)
 
 module.exports = Tutor
