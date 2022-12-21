@@ -23,14 +23,7 @@ Subject.init(
         humanities: {
             type: DataTypes.BOOLEAN
         },
-        user_id:{
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references:{
-                model: 'user',
-                key: 'id'
-            }
-        },
+        
         tutor_id: {
             type: DataTypes.INTEGER,
             allowNull: true,
