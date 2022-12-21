@@ -32,7 +32,16 @@ Subject.init(
                 key: 'id'
             }
         }
-    }
+    },
+{
+    
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'subject',
+    
+}
 )
 
 module.exports = Subject
