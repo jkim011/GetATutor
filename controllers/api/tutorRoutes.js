@@ -5,17 +5,13 @@ const {Tutor, Subject, User} = require('../../models')
 router.get('/', async (req,res) => {
     try{
         const tutorData = await Tutor.findAll({
-            // include:[
-            //     {
-            //         model: Subject,
-            //         attributes: [
-            //             'math',
-            //             'science',
-            //             'coding',
-            //             'humanities'
-            //         ]
-            //     }
-            // ]
+            
+            include:[
+                {
+                    model: Subject,
+                   
+                }
+            ]
         });
         const tutorList = tutorData.map((tutor)=> tutor.get({plain: true}));
         res.status(200).json(tutorList)
