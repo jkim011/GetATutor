@@ -25,6 +25,7 @@ Subject.init(
         },
         
         tutor_id: {
+            
             type: DataTypes.INTEGER,
             allowNull: true,
             references:{
