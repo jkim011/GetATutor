@@ -1,0 +1,20 @@
+{{#each tutorList as |tutor| }}
+<div id = "tutorProfile">
+    <div id="tutorName">
+        <h1>{{tutor.name}}</h1>
+    </div>
+
+    <div id="subjectList">
+
+    </div>
+
+    <div id="profile">
+        <p>{{tutor.profile}}</p>
+    </div>
+
+    <div id = "email">
+        <a href="mailto:{{tutor.email}}">{{tutor.email}}</a>
+    </div>
+
+</div>
+{{/each}}
