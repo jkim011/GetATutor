@@ -1,18 +1,32 @@
 {{#each tutorList as |tutor| }}
 <div id = "tutorProfile">
-    <div id="tutorName">
+    <div id="tutorName" class="">
         <h1>{{tutor.name}}</h1>
     </div>
 
-    <div id="subjectList">
+    <div id="subjectList" class="">
+       
+        <p>Im Teaching:</p>
+        {{#if subject.math}}
+        <p>Math</p>
+        {{/if}}
+        {{#if subject.science}}
+        <p>Science</p>
+        {{/if}}
+        {{#if subject.coding}}
+        <p>Coding</p>
+        {{/if}}
+        {{#if subject.humanities}}
+        <p>Humanities</p>
+        {{/if}}
 
     </div>
 
-    <div id="profile">
+    <div id="profile" class="">
         <p>{{tutor.profile}}</p>
     </div>
 
-    <div id = "email">
+    <div id = "email" class="">
         <a href="mailto:{{tutor.email}}">{{tutor.email}}</a>
     </div>
 
