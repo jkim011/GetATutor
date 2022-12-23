@@ -2,9 +2,9 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
+    "GetATutor_db",
+    "root",
+    "KwanghoMySqL-01",
     {
         host: 'localhost',
         dialect: 'mysql',
