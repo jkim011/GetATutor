@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get A tutor- Home</title>
+    <style>
+    
+    {{!-- Your style goes here --}}
+
+    </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div>
+    <!----------heading details-------->
+    <div class="topContainer">
+    <h2 class="topHeading">
+      {{DATA.instituteName}}
+    </h2>
+    <p> ({{DATA.instituteType}})</p>
+    <p class="topDetails">{{DATA.instituteDetails}}</p>
+    <h5 style="display:inline-block;margin:20px; margin-top:10px;font-weight:normal">{{DATA.noticeNumberandDate}}</h5>
+    <h5 style="display:inline-block;margin-right:15px;margin-top:10px;font-weight:normal; margin-left:295px">
+      {{TODAY}}</h5>
+    </div>
+
+    <h4 style="text-transform: uppercase ;text-decoration: underline ;margin:15px;text-align: center;font-size:15px;">
+      notification</h4>
+    <p style="margin:18px;text-align: left;font-size: 15px;">Sub:- Time schedule of {{exam.EXAM_REGISTRATION_NAME}} Notification-reg.</p>
+    <p style="margin:18px;text-align:left;font-size: 15px;">The Time schedule of {{exam.EXAM_REGISTRATION_NAME}} is published herewith.</p>
+    <h4 class="timeTableHead"> timetable &nbsp;for &nbsp; {{DEPARTMENT}}</h4>
+
+    <table>
+      <tr>
+        <th>Date</th>
+        {{!-- <th>Day</th> --}}
+        <th>Slot</th>
+        <th>Session</th>
+        <th>Course Code</th>
+        <th>Course Name</th>
+      </tr>
+      {{#each timeTable as | t |}}
+
+      <tr>
+        <td>{{t.EXAM_DATE }}<br>{{t.DAY}}</td>
+        {{!-- <td>{{t.DAY}}</td> --}}
+        <td>{{t.SLOT}}</td>
+        <td>{{t.SESSION}}</td>
+        <td>{{t.COURSE_CODE}}</td>
+        <td>{{t.COURSE_NAME}}</td>
+      </tr>
+        {{/each}}
+
+
+ 
+      
+      
+    </table>
+ 
+
+ 
+  </div> 
+<p style="text-transform: uppercase;text-align: right ;margin-right:30px; margin-top :50px ;font-size:15px;">{{DATA.approver}} </p>
+<p style="text-transform: capitalize; margin:15px; text-align: left;font-size:15px;margin-top :60px ;">copy to : {{DATA.noticeCopy}}</p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
