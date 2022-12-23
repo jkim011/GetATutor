@@ -2,61 +2,13 @@ const {Subject} = require('../models');
 
 const subjectData = [
     {
-        math:{
-           Boolean: false
-        },
-        science:{
-            Boolean: false
-        },
-        coding:{
-            Boolean: false
-        },
-        humanities: {
-            Boolean: true
-        }       
+        math: false,
+        science: false,
+        coding: false,
+        humanities: true,
+        tutor_id: 1
     },
-    {
-        math:{
-            Boolean: false
-         },
-         science:{
-             Boolean: true
-         },
-         coding:{
-             Boolean: false
-         },
-         humanities: {
-             Boolean: false
-         }     
-    },
-    {
-        math:{
-            Boolean: false
-         },
-         science:{
-             Boolean: true
-         },
-         coding:{
-             Boolean: false
-         },
-         humanities: {
-             Boolean: true
-         }     
-    },
-    {
-        math:{
-            Boolean: true
-         },
-         science:{
-             Boolean: false
-         },
-         coding:{
-             Boolean: true
-         },
-         humanities: {
-             Boolean: false
-         }     
-    },
+  
 
 
 ]

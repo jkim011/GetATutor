@@ -6,11 +6,11 @@ const seedAll = async () => {
     await sequelize.sync({force: true});
     console.log("______________DATABASE SYNCED______________")
 
-    await seedTutor
+    await seedTutor()
     console.log("______________TUTORS SEEDED______________")
 
-    await seedSubject 
-    console.log("______________TUTORS SEEDED______________")
+    await seedSubject()
+    console.log("______________SUBJECT SEEDED______________")
 
     process.exit(0);
 }
