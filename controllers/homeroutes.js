@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const {Tutor, Subject, User} = require('../models')
+const {Tutor, Subject, User} = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try{
@@ -28,6 +29,14 @@ router.get('/signup', async (req, res) => {
 router.get('/subjects', async (req, res) => {
     try {
         res.render("subjects")
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+        res.render("profile")
     } catch (err) {
         res.status(500).json(err);
     }

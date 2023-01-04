@@ -26,6 +26,45 @@ router.post('/', async (req, res) => {
     } catch(err) {
         res.status(500).json(err)
     }
+});
+
+router.post('/login', async (req, res) => {
+    try{
+        const userLogin = await User.findOne({
+            where: {email: req.body.email}
+        });
+
+        if(!userLogin){
+            res.status(400).json({message: 'Incorrect email or password'})
+            return;
+        }
+
+        const validPw = await userLogin.checkPassword(req.body.password);
+
+        if(!validPw){
+            res.status(400).json({message: 'Incorrect email or password'})
+            return;
+        }
+
+        req.session.save(() =>{
+            req.session.user_id = userLogin.id;
+            req.session.loggedIn = true;
+            res.json({ user: userLogin, message: "Welcome back! You're logged in."})
+        })
+
+    } catch(err){
+        res.status(400).json(err)
+    }
 })
+
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
 
 module.exports = router

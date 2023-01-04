@@ -1,0 +1,29 @@
+<h1>User: {{user.name}}</h1>
+<h2>Email: {{user.email}} </h2>
+<p>Subjects I'm Studying:</p>
+
+<div id="subjectListUser" class="">
+        {{#if subject.math}}
+        <p>Math</p>
+        {{/if}}
+        {{#if subject.science}}
+        <p>Science</p>
+        {{/if}}
+        {{#if subject.coding}}
+        <p>Coding</p>
+        {{/if}}
+        {{#if subject.humanities}}
+        <p>Humanities</p>
+        {{/if}}
+</div>
+
+<div id="tutorsForUser">
+    <h2>My Tutors</h2>
+    <ul>
+
+    </ul>
+</div>
+
+<button id="userLogout" type="click" class="btn btn-primary">Logout</button>
+
+<script src="/js/logout.js"></script>
