@@ -8,6 +8,28 @@ const subjectData = [
         humanities: true,
         tutor_id: 1
     },
+    {
+        math: false,
+        science: true,
+        coding: false,
+        humanities: false,
+        tutor_id: 2
+    },
+    {
+        math: true,
+        science: true,
+        coding: true,
+        humanities: true,
+        tutor_id: 3
+    },
+    {
+        math: false,
+        science: true,
+        coding: true,
+        humanities: false,
+        tutor_id: 4
+    },
+    
   
 
 
