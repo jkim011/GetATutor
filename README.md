@@ -24,7 +24,10 @@ This application is covered under the following license:
   MIT License
 
   ## Contributing
-  asdlkfj
+  Ryan Street
+  Jared Kim
+  Merrin Abraham
+  Jeremy Koshy
 
   ## Tests
   asd;lkfj
