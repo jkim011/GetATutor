@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const {Tutor, Subject, User} = require('../../models')
+const {Tutor, Subject, User} = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //at the api/tutors endpoint
-router.get('/', async (req,res) => {
+router.get('/', withAuth, async (req,res) => {
     try{
         const tutorData = await Tutor.findAll({
             
