@@ -9,12 +9,14 @@ router.get('/', async (req,res) => {
             include:[
                 {
                     model: Subject,
-                   
+                                       
                 }
             ]
         });
         const tutorList = tutorData.map((tutor)=> tutor.get({plain: true}));
-        res.status(200).json(tutorList)
+       console.log(tutorList)
+        // res.status(200).json(tutorList)
+        res.render('tutors', {tutorList})
     } catch(err){
         res.status(500).json(err)
     }
