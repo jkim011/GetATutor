@@ -6,8 +6,9 @@
         <p class="aboutUs">GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you may need tutoring for, <br>
           and you can choose from our list of outstanding tutors.
         </p>
-    <h5>{{ todays date }}</h5>
+    <h5>{{ format_date }}</h5>
     <h5>Calendar:</h5>
+
     </div>
 
  <h5>Upcoming sessions:</h5>
@@ -19,9 +20,9 @@
       </tr>
 
       <tr>
-        <td>{{ EXAM_DATE }}</td>
+        {{!-- <td>{{ session date }}</td>
         <td>{{ tutor name }}</td>
-        <td>{{ subject name }}</td>
+        <td>{{ subject name }}</td> --}}
       </tr>
     </table>
     
