@@ -30,9 +30,20 @@ const subjectData = [
         tutor_id: 4
     },
     
-  
-
-
+    {
+        math: false,
+        science: true,
+        coding: true,
+        humanities: false,
+        user_id: 1
+    },
+      {
+        math: false,
+        science: true,
+        coding: true,
+        humanities: false,
+        user_id: 2
+    },
 ]
 
 const seedSubject = () => Subject.bulkCreate(subjectData);

@@ -3,9 +3,29 @@ const {Tutor, Subject, User} = require('../../models')
 
 router.get('/', async (req, res) => {
     try {
-        const userData = await User.findAll({})
+        const userData = await User.findAll({ include: [
+            {
+                model: Subject,
+            }
+        ]})
         res.json(userData)
     } catch(err) {
+        res.status(500).json(err)
+    }
+})
+
+router.get('/:id', async (req, res) => {
+    try{
+        const userData = await User.findByPk(req.params.id,{
+        include: [
+            {
+                model: Subject,
+                
+            }
+        ]
+       }) 
+       res.json(userData)
+    }catch (err){
         res.status(500).json(err)
     }
 })
@@ -24,6 +44,40 @@ router.post('/', async (req, res) => {
             res.json(postUser)
         })
     } catch(err) {
+        res.status(500).json(err)
+    }
+});
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const deleteUser = await User.destroy({
+           where:{
+            id: req.params.id,
+           }
+        })
+        res.status(200).json(deleteUser)
+    } catch(err){
+        res.status(500).json(err)
+    }
+})
+
+router.put('/:id', async (req,res)=>{
+    try{
+        const updateUser = await User.update(
+        {
+            where:{ 
+                id: req.params.id
+            }
+        },
+        {   subject:{
+                math: req.body.math,
+                science: req.body.science,
+                coding: req.body.coding,
+                humanities: req.body.humanities
+        }
+        });
+        res.status(200).json(updateUser)
+    } catch (err){
         res.status(500).json(err)
     }
 });
