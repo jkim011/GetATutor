@@ -1,0 +1,11 @@
+.child_container1{
+    background-image: url("/public/assets/tutor2.JPG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 85vh;
+    background-position: -15;
+    width: 100vw;
+}
+body{
+    background-color: red;
+}
