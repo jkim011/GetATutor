@@ -4,6 +4,9 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 
+// date-fns npm package
+const datefns = require("date-fns")
+
 const helpers = require("./utils/helpers");
 
 const sequelize = require("./config/connection");

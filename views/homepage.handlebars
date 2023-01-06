@@ -13,23 +13,27 @@
                   <h1> This is<span class="text-dark">GetATutor.com</span></h1>
                   <p>GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you may need tutoring for, <br>
           and you can choose from our list of outstanding tutors.</p>
-    <h5>{{ format_date }}</h5>
-    <h5>Calendar:</h5>
+
+   <h5>Today's Date: {{ current_date }}</h5>
+
    <h5>Upcoming sessions:</h5>
     <table>
       <tr>
         <th>Date</th>
+        <th>Time</th>
         <th>Tutor</th>
         <th>Subject</th>
       </tr>
 
       <tr>
-        {{!-- <td>{{ session date }}</td>
-        <td>{{ tutor name }}</td>
-        <td>{{ subject name }}</td> --}}
+        <td>{{ session_date }}</td>
+        <td>{{ session_time }}</td>
+        <td>{{ tutor.name }}</td>
+        <td>{{ subject.name }}</td>
       </tr>
     </table>
    </div>
+
    {{!-- <div class="contact">
       <img src="/assets/Project2logo.JPG" class="contact-logo">
       <ul class="contact-info">
