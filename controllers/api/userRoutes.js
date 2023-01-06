@@ -63,19 +63,11 @@ router.delete('/:id', async (req, res) => {
 
 router.put('/:id', async (req,res)=>{
     try{
-        const updateUser = await User.update(
-        {
-            where:{ 
-                id: req.params.id
-            }
-        },
-        {   subject:{
-                math: req.body.math,
-                science: req.body.science,
-                coding: req.body.coding,
-                humanities: req.body.humanities
-        }
-        });
+        const updateUser = await Subject.update(req.body, {
+            where: {user_id: req.params.id}
+
+        })    
+     
         res.status(200).json(updateUser)
     } catch (err){
         res.status(500).json(err)

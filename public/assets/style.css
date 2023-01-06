@@ -1,0 +1,42 @@
+.header {
+    height: 100vh;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.carousel-item {
+    margin-top: 20%;
+}
+.carousel-item h1{
+    color: #9c9c9c;
+}
+
+h5{
+    margin-top: 50%;
+}
+.heading {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aboutUs {
+    text-align: center;
+    font-weight: bold;
+}
+.h2 h2 {
+    text-align: center;
+    font-weight: light;
+}
+
+.nav-item {
+    font-weight: 20;
+}
+nav {
+    background-color: aliceblue;
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .header {
+    background-position: 68%;
+}
+}

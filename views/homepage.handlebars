@@ -1,17 +1,21 @@
-  <div>
+<div>
     <div class="container">
-      <h2 class="heading">
-        GetATutor
-      </h2>
-        <p class="aboutUs">GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you may need tutoring for, <br>
-          and you can choose from our list of outstanding tutors.
-        </p>
+      <div class="row px-2">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-12 pt-5">
+            {{!-- <div class="sub_child_container">
+                <span class="purple">What class would you like help with?</span>
+                <input type="text" placeholder="Type here..">
+                <button class="btn-primary bg_purple">Connect Now</button>
+            </div> --}}
+            <div id="carouselExampleControls" class="carousel slide pt-5" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <h1> This is<span class="text-dark">GetATutor.com</span></h1>
+                  <p>GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you may need tutoring for, <br>
+          and you can choose from our list of outstanding tutors.</p>
     <h5>{{ format_date }}</h5>
     <h5>Calendar:</h5>
-
-    </div>
-
- <h5>Upcoming sessions:</h5>
+   <h5>Upcoming sessions:</h5>
     <table>
       <tr>
         <th>Date</th>
@@ -25,5 +29,13 @@
         <td>{{ subject name }}</td> --}}
       </tr>
     </table>
-    
-  </div> 
+   </div>
+   {{!-- <div class="contact">
+      <img src="/assets/Project2logo.JPG" class="contact-logo">
+      <ul class="contact-info">
+        <li><i></i> 555-555-5555</li>
+        <li><i></i> 555-555-5555</li>
+        <li><i></i> 555-555-5555</li>
+      </ul>
+    </div> --}}
+  </div>
