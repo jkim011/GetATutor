@@ -37,8 +37,9 @@ router.get('/subjects', async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
-            attributes: {exclude: ['password']}
+            attributes: {exclude: ['password']},
             //include subjects to study, potential tutors
+            include:[{model: Subject}]
         });
         const userProfile = userData.get({plain:true})
        
