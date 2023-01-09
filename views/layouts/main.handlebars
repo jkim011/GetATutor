@@ -25,25 +25,32 @@
             <li class="nav-item">
               <a class="nav-link text-black" href="/">Home</a>
             </li>
-            <li class="nav-item">
+
+            {{!-- <li class="nav-item">
               <a class="nav-link text-black" href="/subjects">Subjects</a>
-            </li>
+            </li> --}}
+
+            {{!-- Subjects page for future Development --}}
+
             <li class="nav-item">
               <a class="nav-link text-black" href="/api/tutors">Tutors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-black" href="/profile">Profile</a>
             </li>
-            {{#if loggedIn}}
+
+            <li class="nav-item">
+              <a class="nav-link text-black" href="/login">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black" href="/signup">Sign up</a>
+            </li>
+
+            {{!-- {{#if loggedIn}}
             <button id="logout" class="btn-no-style">Logout</button>
-            {{else}}
-            <li class="nav-item">
-              <a class="nav-link text-white" href="/login">Log in</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="/signup">Sign up</a>
-            </li>
-            {{/if}}
+           {{/if}} --}}
+           {{!-- Log out nav bar for future dev --}}
+
           </ul>
         </div>
       </div>
