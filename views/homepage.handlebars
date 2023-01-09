@@ -4,9 +4,9 @@
         <div class="main_container">
           <div class="child_container child_container1">
             <div class="sub_child_container">
-              <span class="purple">What class would you like help with?</span>
+              {{!-- <span class="purple">What class would you like help with?</span>
               <input type="text" placeholder="Type here..">
-              <button class="btn-primary bg_purple">Connect Now</button>
+              <button class="btn-primary bg_purple">Connect Now</button> --}}
             </div>
             <div class="about-container">
               <p class="aboutUs">GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade
@@ -15,45 +15,60 @@
               </p>
             </div>
           </div>
-    <h5>{{ format_date }}</h5>
-    <h5>Calendar:</h5>
+            
+          <div class="calender-container">
+            <center>
+            <h5>{{ format_date }}</h5>
+              <h3>Calendar</h5>
+            <h5>Today's Date: {{ current_date }}</h5>
+          
+            <h5>Upcoming sessions:</h5>
+            <div class="calender-section">
+              <div class="calender-sub-section">
+                <label for="">Date</label>
+                <span>{{ session_date }}</span>
+              </div>
+              <div class="calender-sub-section">
+                <label for="">Time</label>
+                <span>{{ session_time }}</span>
+              </div>
+              <div class="calender-sub-section">
+                <label for="">Tutor</label>
+                <span>{{ tutor.name }}</span>
+              </div>
+              <div class="calender-sub-section">
+                <label for="">Subject</label>
+                <span>{{ subject.name }}</span>
+              </div>
+            </div>
+            </center>
+          </div>
 
+  <div class="customer-container">
+    <div class="customer-sub-container">
+<center>
 
-   <h5>Today's Date: {{ current_date }}</h5>
-
-   <h5>Upcoming sessions:</h5>
-    <table>
-      <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>Tutor</th>
-        <th>Subject</th>
-      </tr>
-
-      <tr>
-        <td>{{ session_date }}</td>
-        <td>{{ session_time }}</td>
-        <td>{{ tutor.name }}</td>
-        <td>{{ subject.name }}</td>
-      </tr>
-    </table>
-
-    <div class="contact">
-
-   </div>
-
-   {{!-- <div class="contact">
-
-      <img src="/assets/Project2logo.JPG" class="contact-logo">
-      <ul class="contact-info">
-        <li><i></i> 555-555-5555</li>
-        <li><i></i> 555-555-5555</li>
-        <li><i></i> 555-555-5555</li>
-      </ul>
-
+    <h1>Customer Reviews</h1>
+</center>
     </div>
-  </div> 
+    <div class="customer-sub-container-2">
+      <div class="customer-tile">
+        <div class="customer-img"></div>
+        <div class="customer-review">I received the best service I could have asked for.  My tutor was super professional to deal with and helped me a lot.</div>
+      </div>
+      <div class="customer-tile">
+        <div class="customer-img"></div>
+        <div class="customer-review">The entire experience was so easy and friendly.  The price was very reasonable.  I don’t know what I would have done without them.</div>
+      </div>
+      <div class="customer-tile">
+         <div class="customer-img"></div>
+        <div class="customer-review">I can’t say enough good things about the quality of this company.  Highly, highly recommend using them.</div>
+      </div>
+    </div>
+  </div>
 
-    </div> --}}
+
+
+
   </div>
 
