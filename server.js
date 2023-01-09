@@ -4,6 +4,9 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 
+// date-fns npm package
+const datefns = require("date-fns")
+
 const helpers = require("./utils/helpers");
 
 const sequelize = require("./config/connection");
@@ -37,5 +40,5 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening",path.join(__dirname, "/public")));
+  app.listen(PORT, () => console.log("Now listening" ,PORT));
 });

@@ -12,4 +12,16 @@ Subject.belongsTo(Tutor,{
     onDelete: "CASCADE"
 });
 
+User.hasOne(Subject, {
+    foreignKey: "user_id",
+    onDelete:"CASCADE"
+});
+
+Subject.belongsTo(User, {
+    foreignKey:"user_id",
+    onDelete: "CASCADE"
+});
+
+
+
 module.exports = { Subject, User, Tutor }

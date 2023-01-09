@@ -18,9 +18,9 @@ const signupFormHandler = async event => {
         });
 
         if(response.ok) {
-            alert("You're logged in!")
+            alert("Welcome to GetATutor!")
             console.log("######################################")
-            document.location.replace('/homepage')
+            document.location.replace('/choose-subjects')
         } else {
             alert(response.statusText)
         }

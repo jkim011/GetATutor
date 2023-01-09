@@ -8,13 +8,17 @@ const loginFormHandler = async event => {
 
     if(email && password) {
         //post request to /login api
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/users/auth/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {'Content-type': 'application/json'},
         });
         
         if(response.ok) {
+            const parsedResponse = await response.json()
+            console.log("HEre is the user response", JSON.stringify(parsedResponse))
+            localStorage.setItem("user", JSON.stringify(parsedResponse));
+
             document.location.replace('/profile');
             alert('Welcome Back!')
         } else {
