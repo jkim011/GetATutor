@@ -1,79 +1,89 @@
  <div>
-          <div class="main_container">
-        <div class="child_container child_container1">
-            <div class="sub_child_container">
-    <div class="container">
-      <div class="row px-2">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-12 pt-5">
-            {{!-- <div class="sub_child_container">
-                <span class="purple">What class would you like help with?</span>
-                <input type="text" placeholder="Type here..">
-                <button class="btn-primary bg_purple">Connect Now</button>
+  <div class="container">
+    <div class="carousel-item active">
+      <h1> This is<span class="text-dark">GetATutor.com</span></h1>
+      <p>GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you
+        may need tutoring for, <br>
+        and you can choose from our list of outstanding tutors.</p>
+
+      <h5>Today's Date: {{ current_date }}</h5>
+
+      <h5>Upcoming sessions:</h5>
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Tutor</th>
+          <th>Subject</th>
+        </tr>
+
+        <tr>
+          <td>{{ session_date }}</td>
+          <td>{{ session_time }}</td>
+          <td>{{ tutor.name }}</td>
+          <td>{{ subject.name }}</td>
+        </tr>
+      </table>
+    </div>
+    {{!-- <footer> --}}
+      <div class="box-items">
+        {{!-- <section class="text-slate-50 body-font h-16 absolute bottom-0"> --}}
+          {{!-- <div class="container px-5 py-24 mx-auto">
+            <div class="row flex flex-wrap -m-4">
+              <div class="lg:w-1/3 lg:mb-0 mb-6 p-4"> --}}
+                <div class="h-full text-center">
+                  <img alt="testimonial"
+                    class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400"
+                    src="/assets/user.png">
+                  <p class="leading-relaxed">Five star review. :)</p>
+                  {{!-- <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span> --}}
+                  <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Mary Thomas
+                  </h2>
+                  <p class="text-slate-50">College Student</p>
+                </div>
+                {{!--
+              </div> --}}
+              {{!-- <div class="lg:w-1/3 lg:mb-0 mb-6 p-4"> --}}
+                <div class="h-full text-center">
+                  <img alt="testimonial"
+                    class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400"
+                    src="/assets/user.png">
+                  <p class="leading-relaxed">Five star review. :)</p>
+                  {{!-- <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span> --}}
+                  <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Ben Louis</h2>
+                  <p class="text-slate-50">Student</p>
+                </div>
+                {{!--
+              </div>
+              <div class="lg:w-1/3 lg:mb-0 p-4"> --}}
+                <div class="h-full text-center">
+                  <img alt="testimonial"
+                    class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400"
+                    src="/assets/user.png">
+                  <p class="leading-relaxed">Five star review. :)</p>
+                  {{!-- <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span> --}}
+                  <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Jane Austin
+                  </h2>
+                  <p class="text-slate-50">Student</p>
+                </div>
+                {{!--
+              </div>
             </div> --}}
-            <div id="carouselExampleControls" class="carousel slide pt-5" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <h1> This is<span class="text-lightblue">GetATutor.com</span></h1>
-                  <p>GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you may need tutoring for, <br>
-          and you can choose from our list of outstanding tutors.</p>
-    <h5>{{ format_date }}</h5>
-    <h5>Calendar:</h5>
-   <h5>Upcoming sessions:</h5>
-    <table>
-      <tr>
-        <th>Date</th>
-        <th>Tutor</th>
-        <th>Subject</th>
-      </tr>
+          </div>
+          <div class="contact">
+            <img src="/assets/Project2logo.JPG" class="contact-logo">
+            <ul class="contact-info">
+              <li><i></i> 555-555-5555</li>
+              <li><i></i> 555-555-5555</li>
+              <li><i></i> 555-555-5555</li>
+            </ul>
+          </div>
+          {{!--
+        </section> --}}
 
-      <tr>
-        {{!-- <td>{{ session date }}</td>
-        <td>{{ tutor name }}</td>
-        <td>{{ subject name }}</td> --}}
-      </tr>
-    </table>
-   </div>
-   <footer>
-    <section class="text-slate-50 body-font h-16 absolute bottom-0">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400" src="/assets/user.png">
-          <p class="leading-relaxed">Five star review. :)</p>
-          <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span>
-          <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Mary Thomas</h2>
-          <p class="text-slate-50">College Student</p>
-        </div>
       </div>
-      <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400" src="/assets/user.png">
-          <p class="leading-relaxed">Five star review. :)</p>
-          <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span>
-          <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Ben Louis</h2>
-          <p class="text-slate-50">Student</p>
-        </div>
-      </div>
-      <div class="lg:w-1/3 lg:mb-0 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400" src="/assets/user.png">
-          <p class="leading-relaxed">Five star review. :)</p>
-          <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span>
-          <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Jane Austin</h2>
-          <p class="text-slate-50">Student</p>
-        </div>
-      </div>
-    </div>
+      {{!--
   </div>
-   <div class="contact">
-      <img src="/assets/Project2logo.JPG" class="contact-logo">
-      <ul class="contact-info">
-        <li><i></i> 555-555-5555</li>
-        <li><i></i> 555-555-5555</li>
-        <li><i></i> 555-555-5555</li>
-      </ul>
-    </div>
-    </section>
-
-  </div>
+</div>
+</div>
+</div> --}}
