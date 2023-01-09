@@ -1,89 +1,79 @@
- <div>
-  <div class="container">
-    <div class="carousel-item active">
-      <h1> This is<span class="text-dark">GetATutor.com</span></h1>
-      <p>GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade levels that you
-        may need tutoring for, <br>
-        and you can choose from our list of outstanding tutors.</p>
 
-      <h5>Today's Date: {{ current_date }}</h5>
 
-      <h5>Upcoming sessions:</h5>
-      <table>
-        <tr>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Tutor</th>
-          <th>Subject</th>
-        </tr>
+  <div>
+        <div class="main_container">
+          <div class="child_container child_container1">
+            <div class="sub_child_container">
+              {{!-- <span class="purple">What class would you like help with?</span>
+              <input type="text" placeholder="Type here..">
+              <button class="btn-primary bg_purple">Connect Now</button> --}}
+            </div>
+            <div class="about-container">
+              <p class="aboutUs">GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade
+                levels that you may need tutoring for,
+                and you can choose from our list of outstanding tutors.
+              </p>
+            </div>
+          </div>
+            
+            {{!-- Dynamic Calendar for future development --}}
 
-        <tr>
-          <td>{{ session_date }}</td>
-          <td>{{ session_time }}</td>
-          <td>{{ tutor.name }}</td>
-          <td>{{ subject.name }}</td>
-        </tr>
-      </table>
+          {{!-- <div class="calender-container">
+            <center>
+            <h5>{{ format_date }}</h5>
+              <h3>Calendar</h5>
+            <h5>Today's Date: {{ current_date }}</h5>
+          
+            <h5>Upcoming sessions:</h5>
+            <div class="calender-section">
+              <div class="calender-sub-section">
+                <label for="">Date</label>
+                <span>{{ session_date }}</span>
+              </div>
+              <div class="calender-sub-section">
+                <label for="">Time</label>
+                <span>{{ session_time }}</span>
+              </div>
+              <div class="calender-sub-section">
+                <label for="">Tutor</label>
+                <span>{{ tutor.name }}</span>
+              </div>
+              <div class="calender-sub-section">
+                <label for="">Subject</label>
+                <span>{{ subject.name }}</span>
+              </div>
+            </div>
+            </center>
+          </div> --}}
+
+  <div class="customer-container">
+    <div class="customer-sub-container">
+<center>
+
+    <h1>Customer Reviews</h1>
+</center>
     </div>
-    {{!-- <footer> --}}
-      <div class="box-items">
-        {{!-- <section class="text-slate-50 body-font h-16 absolute bottom-0"> --}}
-          {{!-- <div class="container px-5 py-24 mx-auto">
-            <div class="row flex flex-wrap -m-4">
-              <div class="lg:w-1/3 lg:mb-0 mb-6 p-4"> --}}
-                <div class="h-full text-center">
-                  <img alt="testimonial"
-                    class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400"
-                    src="/assets/user.png">
-                  <p class="leading-relaxed">Five star review. :)</p>
-                  {{!-- <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span> --}}
-                  <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Mary Thomas
-                  </h2>
-                  <p class="text-slate-50">College Student</p>
-                </div>
-                {{!--
-              </div> --}}
-              {{!-- <div class="lg:w-1/3 lg:mb-0 mb-6 p-4"> --}}
-                <div class="h-full text-center">
-                  <img alt="testimonial"
-                    class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400"
-                    src="/assets/user.png">
-                  <p class="leading-relaxed">Five star review. :)</p>
-                  {{!-- <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span> --}}
-                  <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Ben Louis</h2>
-                  <p class="text-slate-50">Student</p>
-                </div>
-                {{!--
-              </div>
-              <div class="lg:w-1/3 lg:mb-0 p-4"> --}}
-                <div class="h-full text-center">
-                  <img alt="testimonial"
-                    class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-violet-400"
-                    src="/assets/user.png">
-                  <p class="leading-relaxed">Five star review. :)</p>
-                  {{!-- <span class="inline-block h-1 w-10 rounded bg-violet-500 mt-6 mb-4"></span> --}}
-                  <h2 class="text-slate-50 font-medium title-font tracking-wider text-sm">Jane Austin
-                  </h2>
-                  <p class="text-slate-50">Student</p>
-                </div>
-                {{!--
-              </div>
-            </div> --}}
-          </div>
-          <div class="contact">
-            <img src="/assets/Project2logo.JPG" class="contact-logo">
-            <ul class="contact-info">
-              <li><i></i> 555-555-5555</li>
-              <li><i></i> 555-555-5555</li>
-              <li><i></i> 555-555-5555</li>
-            </ul>
-          </div>
-          {{!--
-        </section> --}}
-
+    <div class="customer-sub-container-2">
+      <div class="customer-tile">
+        <div class="customer-img img-1"></div>
+        <div class="customer-review">I received the best service I could have asked for.  My tutor was super professional to deal with and helped me a lot.</div>
       </div>
-      {{!--
+      <div class="customer-tile">
+        <div class="customer-img img-2"></div>
+        <div class="customer-review">The entire experience was so easy and friendly.  The price was very reasonable.  I don’t know what I would have done without them.</div>
+      </div>
+      <div class="customer-tile">
+         <div class="customer-img img-3"></div>
+        <div class="customer-review">I can’t say enough good things about the quality of this company.  Highly, highly recommend using them.</div>
+      </div>
+       <div class="customer-tile">
+         <div class="customer-img img-4"></div>
+        <div class="customer-review">They helped me a lot with my college coding class and would highly recommend them!.</div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div> --}}
+
+
+
+
+  </div>
