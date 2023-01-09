@@ -15,8 +15,8 @@ const chooseSubjectFormHandler = async event => {
         method:'POST',
         body: JSON.stringify({math, science, humanities, coding}),
         headers: { "Content-Type": "application/json"}
-
     })
+    document.location.replace('/profile')
 
 }
 

@@ -7,8 +7,19 @@
 .carousel-item {
     margin-top: 20%;
 }
+
+
 .carousel-item h1{
     color: #9c9c9c;
+}
+
+#getATutor{
+    background-image: url("../Project\ 2\ logo.JPG");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 70% 70%;
+    height: 10vh;  
+    width: 10vw; 
 }
 
 h5{
@@ -19,7 +30,16 @@ h5{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-
+.box-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.flex-box {
+    display: flex;
+}
 .aboutUs {
     text-align: center;
     font-weight: bold;
