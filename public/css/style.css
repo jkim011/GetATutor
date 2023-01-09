@@ -106,8 +106,8 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     display: grid;
     grid-template-rows: 1fr 1fr;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
-    height: 20rem;
-    width: 20rem;
+    height: 22rem;
+    width: 17rem;
     align-items: center;
     justify-items: center;
     border-radius: 10px;
@@ -118,9 +118,21 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     width: 8rem;
     border-radius: 50%;
     background-color: gray;
-    background-image: url('https://ca.slack-edge.com/T03TFB9PB7A-U040QNPLTPY-3875ba8ea785-512');
+   
     background-size: contain;
 
+}
+.img-1{
+    background-image: url('https://ca.slack-edge.com/T03TFB9PB7A-U040QNPLTPY-3875ba8ea785-512');
+}
+.img-2{
+    background-image: url('https://ca.slack-edge.com/T03TFB9PB7A-U040TFMDAD8-ce14c67729ae-512');
+}
+.img-3{
+    background-image: url('https://ca.slack-edge.com/T03TFB9PB7A-U041EUKEXS4-ecbf15d6d91f-512');
+}
+.img-4{
+    background-image: url('https://ca.slack-edge.com/T03TFB9PB7A-U042092TFPF-df0f9388699f-512');
 }
 .customer-review{
     width: 90%;
