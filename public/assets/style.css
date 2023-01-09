@@ -40,3 +40,30 @@ nav {
     background-position: 68%;
 }
 }
+
+
+/* For scheduling input on tutors.handlebars */
+div {
+    margin-bottom: 10px;
+    position: relative;
+}
+  
+input[type="number"] {
+    width: 100px;
+}
+  
+input + span {
+    padding-right: 30px;
+}
+  
+input:invalid + span::after {
+    position: absolute;
+    content: "*Invalid time*";
+    padding-left: 5px;
+}
+  
+input:valid + span::after {
+    position: absolute;
+    content: "";
+    padding-left: 5px;
+}

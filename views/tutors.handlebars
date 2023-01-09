@@ -32,3 +32,49 @@
 
 </div>
 {{/each}}
+
+{{!-- Scheduling forms --}}
+<div>
+    <h3>Schedule your tutoring session:</h3>
+    
+    <form id="schedule-session">
+        <label for="selected-subject">Select a Subject</label>
+        <select name="subject-choices" id="subject-choices">
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+            <option value="Coding">Coding</option>
+            <option value="Humanities">Humanities</option>
+        </select>
+            <br>
+        <label for="selected-tutor">Select a Tutor</label>
+        <select name="tutor-choices" id="tutor-choices">
+            <optgroup label="Math">
+                <option value="Professor Xavier">Professor Xavier</option>
+            </optgroup>
+            <optgroup label="Science">       
+                <option value="Walter White">Walter White</option>
+                <option value="Professor Xavier">Professor Xavier</option>
+                <option value="Trinity Moss">Trinity Moss</option>
+            </optgroup>
+            <optgroup label="Coding">
+                <option value="Professor Xavier">Professor Xavier</option>
+                <option value="Trinity Moss">Trinity Moss</option>
+            </optgroup>
+            <optgroup label="Humanities">
+                <option value="John Keating">John Keating</option>
+            </optgroup>            
+        </select>
+            <br>
+        <label for="date">Select a date:</label>
+        <input type="date" id="date-choices" name="date"
+               min={{ current_date }} max={{ max_date }}/>
+            <br>
+        <label for="appt-time">Choose an session time (opening hours 9:00am to 6:00pm):</label>
+        <input id="appt-time" type="time" name="appt-time" min="09:00" max="18:00" value=""/>
+        <span class="validity"></span>
+            <br>
+        <button type="submit" class="btn" id="scheduleBtn">Submit</button>
+    </form>   
+</div>
+
+<script src="/js/submit.js"></script>
