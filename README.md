@@ -84,4 +84,4 @@ SOFTWARE.
  * [Jeremy Koshy](https://github.com/jbkoshy)
  
  ## Deployed Application
- [Link to Heroku](
+ [Link to Heroku](https://get-a-tutor.herokuapp.com/)
