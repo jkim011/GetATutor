@@ -1,18 +1,18 @@
-const chooseSubjectFormHandler = async event => {
+const reChooseSubjectFormHandler = async event => {
     console.log("HIT!!!")
     event.preventDefault();
 
-    const math = document.querySelector('#math').checked;
-    const science = document.querySelector("#science").checked;
-    const humanities = document.querySelector("#humanities").checked;
-    const coding = document.querySelector("#coding").checked;
+    const math = document.querySelector('#reMath').checked;
+    const science = document.querySelector("#reScience").checked;
+    const humanities = document.querySelector("#reHumanities").checked;
+    const coding = document.querySelector("#reCoding").checked;
     
     const user = localStorage.getItem("user")
     const parsedUser = JSON.parse(user)
     console.log("USER ID SUBJECT PAGE AHAHAHAH", parsedUser)
     console.log("USER.USER", parsedUser.id)
     const response = await fetch(`/api/users/${parsedUser.id}`, {
-        method:'POST',
+        method:'PUT',
         body: JSON.stringify({math, science, humanities, coding}),
         headers: { "Content-Type": "application/json"}
     })
@@ -20,6 +20,6 @@ const chooseSubjectFormHandler = async event => {
 
 }
 
-const formEl = document.querySelector("#subjectList")
+const reFormEl = document.querySelector("#reSubjectList")
 
-formEl.addEventListener("submit", chooseSubjectFormHandler)
+reFormEl.addEventListener("submit", reChooseSubjectFormHandler)
