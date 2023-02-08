@@ -21,6 +21,9 @@ const signupFormHandler = async event => {
             alert("Welcome to GetATutor!")
             console.log("######################################")
             document.location.replace('/choose-subjects')
+            const parsedResponse = await response.json()
+            console.log("HEre is the user response", JSON.stringify(parsedResponse))
+            localStorage.setItem("user", JSON.stringify(parsedResponse));
         } else {
             alert(response.statusText)
         }

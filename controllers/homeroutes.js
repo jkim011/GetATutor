@@ -63,4 +63,12 @@ router.get('/choose-subjects', withAuth, async (req, res) => {
     }
 })
 
+router.get('/rechoose-subjects', withAuth, async (req, res) => {
+    try {
+        res.render("rechoose-subjects")
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 module.exports = router;
