@@ -114,7 +114,7 @@ router.post('/auth/login', async (req, res) => {
             req.session.user_id = userLogin.id;
             req.session.loggedIn = true;
             console.log("USER LOGIN!!!", userLogin)
-            res.json({ user: userLogin, message: "Welcome back! You're logged in."})
+            res.json(userLogin)
         })
 
     } catch(err){

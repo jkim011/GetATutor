@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try{
-        res.render('homepage')
+        res.render('homepage', {loggedIn: req.session.loggedIn})
     } catch(err){
         res.status(500).json(err); 
     }
@@ -57,7 +57,8 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/choose-subjects', withAuth, async (req, res) => {
     try {
-        res.render("choose-subjects")
+        res.render("choose-subjects",
+        {loggedIn: req.session.loggedIn})
     } catch (err) {
         res.status(500).json(err);
     }
@@ -65,7 +66,8 @@ router.get('/choose-subjects', withAuth, async (req, res) => {
 
 router.get('/rechoose-subjects', withAuth, async (req, res) => {
     try {
-        res.render("rechoose-subjects")
+        res.render("rechoose-subjects", 
+        {loggedIn: req.session.loggedIn})
     } catch (err) {
         res.status(500).json(err);
     }
