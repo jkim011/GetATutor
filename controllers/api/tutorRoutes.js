@@ -17,7 +17,7 @@ router.get('/', withAuth, async (req,res) => {
         const tutorList = tutorData.map((tutor)=> tutor.get({plain: true}));
        console.log(tutorList)
         // res.status(200).json(tutorList)
-        res.render('tutors', {tutorList})
+        res.render('tutors', { loggedIn: true, tutorList})
     } catch(err){
         res.status(500).json(err)
     }

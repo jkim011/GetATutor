@@ -9,7 +9,7 @@ const reChooseSubjectFormHandler = async event => {
     
     const user = localStorage.getItem("user")
     const parsedUser = JSON.parse(user)
-    console.log("USER ID SUBJECT PAGE AHAHAHAH", parsedUser)
+    // console.log("USER ID SUBJECT PAGE AHAHAHAH", parsedUser)
     console.log("USER.USER", parsedUser.id)
     const response = await fetch(`/api/users/${parsedUser.id}`, {
         method:'PUT',

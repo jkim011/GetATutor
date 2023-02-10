@@ -16,7 +16,7 @@ const loginFormHandler = async event => {
         
         if(response.ok) {
             const parsedResponse = await response.json()
-            console.log("HEre is the user response", JSON.stringify(parsedResponse))
+            console.log("Here is the user response", JSON.stringify(parsedResponse))
             localStorage.setItem("user", JSON.stringify(parsedResponse));
 
             document.location.replace('/profile');
