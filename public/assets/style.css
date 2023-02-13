@@ -1,11 +1,11 @@
 .child_container1{
     background-image: url("tutor2.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     height: 85vh;
     /* background-position: 70% 60%; */
     /* width: 100vw; */
-}
+} 
 body{
     background-color:white;
 }
@@ -39,7 +39,7 @@ body{
 
 }
 .about-container{
-    width: 70rem;
+    width: 100%;
     position: absolute;
     top: 5rem;
     left: 2rem;
@@ -101,17 +101,20 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .customer-tile{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     height: 22rem;
     width: 17rem;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     border-radius: 10px;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 .customer-img{
     height: 8rem;
