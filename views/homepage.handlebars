@@ -1,28 +1,26 @@
-
-
-  <div>
-        <div class="main_container">
-          <div class="child_container child_container1">
-            <div class="sub_child_container">
+<div class="main_container">
+  <div class="child_container child_container1">
+    <div class="sub_child_container">
               {{!-- <span class="purple">What class would you like help with?</span>
               <input type="text" placeholder="Type here..">
               <button class="btn-primary bg_purple">Connect Now</button> --}}
-            </div>
-            <div class="about-container">
-              <p class="aboutUs">GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade
-                levels that you may need tutoring for,
-                and you can choose from our list of outstanding tutors.
-              </p>
-            </div>
-          </div>
+    </div>
+    <div class="about-container">
+      <p class="aboutUs">
+        GetATutor is your new easiest way to schedule tutoring. We offer an array of subjects and grade
+        levels that you may need tutoring for,
+        and you can choose from our list of outstanding tutors.
+      </p>
+    </div>
+  </div>
             
             {{!-- Dynamic Calendar for future development --}}
 
-          <div class="calender-container">
-            <center>
-            <h5>{{ format_date }}</h5>
-              <h3>Calendar</h5>
-            <h5>Today's Date: {{ current_date }}</h5>
+  <div class="calender-container">
+    <center>
+      <h5>{{ format_date }}</h5>
+        <h3>Calendar</h3>
+        <h5>Today's Date: {{ current_date }}</h5>
           
             {{!-- <h5>Upcoming sessions:</h5>
             <div class="calender-section">
@@ -43,15 +41,16 @@
                 <span>{{ subject.name }}</span>
               </div>
             </div> --}}
-            </center>
-          </div>
+
+
+    </center>
+  </div>
 
   <div class="customer-container">
     <div class="customer-sub-container">
-<center>
-
-    <h1>Customer Reviews</h1>
-</center>
+      <center>
+        <h1>Customer Reviews</h1>
+      </center>
     </div>
     <div class="customer-sub-container-2">
       <div class="customer-tile">
@@ -63,11 +62,11 @@
         <div class="customer-review">The entire experience was so easy and friendly.  The price was very reasonable.  I don’t know what I would have done without them.</div>
       </div>
       <div class="customer-tile">
-         <div class="customer-img img-3"></div>
+        <div class="customer-img img-3"></div>
         <div class="customer-review">I can’t say enough good things about the quality of this company.  Highly, highly recommend using them.</div>
       </div>
-       <div class="customer-tile">
-         <div class="customer-img img-4"></div>
+      <div class="customer-tile">
+        <div class="customer-img img-4"></div>
         <div class="customer-review">They helped me a lot with my college coding class and would highly recommend them!.</div>
       </div>
     </div>
@@ -75,5 +74,72 @@
 
 
 
+  {{!--                      TESTING SECTION                            --}}
+  {{!-- div with class name "appointment-display" needs to be able to display multiple appointments. 
+        maybe we either make another model, or see if somehow using document.createElement will work. also look at submit.js
+        Uncomment and test section below --}}
 
+  {{!-- <div>
+    <h3>Schedule your tutoring session:</h3>    
+    <form id="schedule-session">
+      <label for="selected-subject">Select a Subject</label>
+      <select name="subject-choices" id="subject-choices">
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="Coding">Coding</option>
+        <option value="Humanities">Humanities</option>
+      </select>
+      <br>
+
+      <label for="selected-tutor">Select a Tutor</label>
+      <select name="tutor-choices" id="tutor-choices">
+        <optgroup label="Math">
+          <option value="Professor Xavier">Professor Xavier</option>
+        </optgroup>
+        <optgroup label="Science">       
+          <option value="Walter White">Walter White</option>
+          <option value="Professor Xavier">Professor Xavier</option>
+          <option value="Trinity Moss">Trinity Moss</option>
+        </optgroup>
+        <optgroup label="Coding">
+          <option value="Professor Xavier">Professor Xavier</option>
+          <option value="Trinity Moss">Trinity Moss</option>
+        </optgroup>
+        <optgroup label="Humanities">
+          <option value="John Keating">John Keating</option>
+        </optgroup>            
+      </select>
+      <br>
+
+      <label for="date">Select a date:</label>
+      <input type="date" id="date-choices" name="date" placeholder="Select Date"/>
+      <br>
+
+      <label for="appt-time">Choose an session time (opening hours 9:00am to 6:00pm):</label>
+      <input id="appt-time" type="time" name="appt-time" min="09:00" max="18:00" value=""/>
+      <span class="validity"></span>
+      <br>
+
+      <button type="submit" class="btn" id="scheduleBtn">Submit</button>
+    </form>   
   </div>
+
+  <div class="appointment-display">
+    <h2>Upcoming Appointments:</h2>
+    <h4>Subject:</h4>
+    <p id="appointmentSubject"></p>
+    <h4>Tutor:</h4>
+    <p id="appointmentTutor"></p>
+    <h4>Date:</h4>
+    <p id="appointmentDate"></p>
+    <h4>Time:</h4>
+    <p id="appointmentTime"></p>
+  </div> --}}
+
+  {{!--             ^  TESTING SECTION  ^                  --}}
+
+           
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="/js/submit.js"></script>
