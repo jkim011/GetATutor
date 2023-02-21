@@ -10,12 +10,12 @@ body{
     background-color:white;
 }
 .navbar{
-    height: 4rem !important;
+    height: 5rem !important;
 }
 #getATutor{
-    background-image: url("./Project2logo.JPG");
+    background-image: url("./Project2logo.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 85%;
     background-position: 70% 70%;
     height: 10vh;  
     width: 10vw; 
@@ -39,7 +39,7 @@ body{
 
 }
 .about-container{
-    width: 70rem;
+    width: 90%;
     position: absolute;
     top: 5rem;
     left: 2rem;
@@ -100,7 +100,8 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
 .customer-sub-container-2{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .customer-tile{
     display: grid;
@@ -151,3 +152,80 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
 .calender-sub-section{
     display: grid;
 }
+
+/* Media query for tablet screens */
+@media only screen and (max-width: 768px) {
+    .sub_child_container {
+      top: 10rem;
+      left: 2rem;
+      width: 80%;
+    }
+    .about-container {
+      top: 3rem;
+      left: 1rem;
+      font-size: medium;
+    }
+    .tutor-container {
+      width: 90%;
+    }
+    .customer-tile {
+      height: 20rem;
+      width: 14rem;
+    }
+    .calender-section {
+      width: 100%;
+    }
+  }
+  
+  /* Media query for mobile screens */
+  @media only screen and (max-width: 769px) {
+    .sub_child_container {
+      top: 7rem;
+      left: 1rem;
+      width: 90%;
+    }
+    .about-container {
+      top: 6rem;
+      left: 1rem;
+      font-size: small;
+    }
+    .tutor-container {
+      width: 90%;
+    }
+    .customer-container {
+      height: auto;
+    }
+    .customer-sub-container-2 {
+      justify-content: center;
+    }
+    .customer-tile {
+      height: 16rem;
+      width: 12rem;
+    }
+    .calender-section {
+      width: 100%;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .child_container1 {
+        background-image: url(tutor2.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 50vh;
+        /* background-position: 70% 60%; */
+        /* width: 100vw; */
+    }
+    .customer-tile {
+        height: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .customer-img {
+        height: 6rem;
+        width: 6rem;
+    }
+    .calender-container {
+        height: 10rem;
+    }
+  }
+  
