@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { de } = require('date-fns/locale');
 const {Tutor, Subject, User, Appointment} = require('../../models')
 
 router.get('/', async (req, res) => {
@@ -78,14 +79,15 @@ router.post('/:id', async (req,res)=>{
     }
 });
 
-router.post('/:id', async (req, res) =>{
+router.post('/:id/appointments', async (req, res) =>{
     try {
         const newAppt = await Appointment.create({
+            
             subject: req.body.subject,
             tutor: req.body.tutor,
             date: req.body.date,
             time: req.body.time,
-            user_id: req.params.user_id
+            user_id: req.params.id
         });
         res.status(200).json(newAppt)
         console.log(newAppt);
@@ -93,6 +95,20 @@ router.post('/:id', async (req, res) =>{
         res.status(400).json(err);
     }
   });
+
+router.delete("/:id/appointments/:apId", async (req,res) => {
+    try {
+        const deleteAppt = await Appointment.destroy({
+            where: {id: req.params.apId}
+        })
+        res.status(200).json(deleteAppt)
+    }catch(err){
+        res.status(400).json(err)
+    }
+})
+
+
+
 
 
 router.put('/:id', async (req,res)=>{
