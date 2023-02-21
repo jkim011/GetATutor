@@ -79,7 +79,8 @@
         maybe we either make another model, or see if somehow using document.createElement will work. also look at submit.js
         Uncomment and test section below --}}
 
-  {{!-- <div>
+{{#if loggedIn}}
+  <div>
     <h3>Schedule your tutoring session:</h3>    
     <form id="schedule-session">
       <label for="selected-subject">Select a Subject</label>
@@ -134,7 +135,8 @@
     <p id="appointmentDate"></p>
     <h4>Time:</h4>
     <p id="appointmentTime"></p>
-  </div> --}}
+  </div>
+  {{/if}}
 
   {{!--             ^  TESTING SECTION  ^                  --}}
 

@@ -2,6 +2,7 @@ const sequelize = require('../config/connection');
 const seedTutor = require('./tutorData');
 const seedSubject = require('./subjectData');
 const seedUser = require('./userData');
+const seedAppointment = require('./appointmentData')
 
 const seedAll = async () => {
     await sequelize.sync({force: true});
@@ -15,6 +16,9 @@ const seedAll = async () => {
 
     await seedSubject()
     console.log("______________SUBJECT SEEDED______________")
+
+    await seedAppointment()
+    console.log("______________APPOINTMENT SEEDED______________")
 
     process.exit(0);
 }

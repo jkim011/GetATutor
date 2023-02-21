@@ -1,6 +1,7 @@
 const Subject = require('./Subject')
 const User = require('./User');
 const Tutor = require('./Tutor');
+const Appointment = require('./Appointment')
 
 Tutor.hasOne(Subject,{
     foreignKey: "tutor_id",
@@ -22,6 +23,16 @@ Subject.belongsTo(User, {
     onDelete: "CASCADE"
 });
 
+User.hasMany(Appointment,{
+    foreignKey: "user_id",
+    onDelete: "CASCADE"
+});
+
+Appointment.belongsTo(User, {
+    foreignKey: "user_id",
+    onDelete: "CASCADE"
+});
 
 
-module.exports = { Subject, User, Tutor }
+
+module.exports = { Subject, User, Tutor, Appointment }
