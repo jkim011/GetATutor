@@ -18,6 +18,23 @@
 </div>
 <a href="/rechoose-subjects" id="reChooseSubjects">Pick New Subjects</a>
 
+<h2>My Appointments</h2>
+
+
+
+
+{{#each appointments as |appointment|}}
+<div id ="apptContainer" class="">
+
+    <div>
+    <h4>Date: {{appointment.date}} Time: {{appointment.time}} </h4>
+     <p>Subject: {{appointment.subject}}</p> 
+     <p>Tutor: {{appointment.tutor}}</p> 
+   </div>
+
+</div>
+{{/each}}
+
 {{!-- For Future development when a user selects tutor --}}
 
 {{!-- <div id="tutorsForUser">
