@@ -27,35 +27,47 @@ const newSession = async event => {
     event.preventDefault();
     
     const subjectChoices = document.getElementById("subject-choices");
-    const subjectChoice = subjectChoices.value;
+    const subject = subjectChoices.value;
 
     const tutorChoices = document.getElementById("tutor-choices");
-    const tutorChoice = tutorChoices.value;
+    const tutor = tutorChoices.value;
 
     const dateChoices = document.getElementById("date-choices");
-    const dateChoice = dateChoices.value;
+    const date = dateChoices.value;
 
     const timeChoices = document.getElementById("appt-time");
-    const timeChoice = timeChoices.value;
+    const time = timeChoices.value;
 
     // if(subjectChoice !== tutorChoice.optgroup.label) {
     //     console.log("not equal")
     // }
 
-    console.log(subjectChoice)
+    console.log(subject)
     console.log("*******************************************")
-    console.log(tutorChoice)
+    console.log(tutor)
     console.log("*******************************************")
-    console.log(dateChoice)
+    console.log(date)
     console.log("*******************************************")
-    console.log(timeChoice)
+    console.log(time)
     console.log("*******************************************")
 
     // TESTING. puts user input onto homepage. need to find a way to have multiple appointments be displayed
-    document.getElementById("appointmentSubject").innerText = subjectChoice
-    document.getElementById("appointmentTutor").innerText = tutorChoice
-    document.getElementById("appointmentDate").innerText = dateChoice
-    document.getElementById("appointmentTime").innerText = timeChoice
+    document.getElementById("appointmentSubject").innerText = subject
+    document.getElementById("appointmentTutor").innerText = tutor
+    document.getElementById("appointmentDate").innerText = date
+    document.getElementById("appointmentTime").innerText = time
+
+    const user = localStorage.getItem("user")
+    const parsedUser = JSON.parse(user)
+    console.log(parsedUser)
+
+    const response = await fetch(`/api/users/${parsedUser.id}/appointments`, {
+        method: "POST",
+        body: JSON.stringify({subject, tutor, date, time}),
+        headers: {"Content-Type": "application/json"}
+    })
+
+
 }
 
 document.querySelector('#schedule-session').addEventListener("submit", newSession);
