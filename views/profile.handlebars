@@ -18,6 +18,29 @@
 </div>
 <a href="/rechoose-subjects" id="reChooseSubjects">Pick New Subjects</a>
 
+<h2>My Appointments</h2>
+
+
+
+
+{{#each appointments as |appointment|}}
+<div id ="apptContainer" class="">
+
+    <div>
+    <h4>Date: {{appointment.date}} Time: {{appointment.time}} </h4>
+     <p>Subject: {{appointment.subject}}</p> 
+     <p>Tutor: {{appointment.tutor}}</p> 
+     
+        <p>Appointment ID:</p>
+        <p id="apptId">{{appointment.id}}</p>
+    
+   </div>
+<btn id="" type="click" class="deleteAppt btn btn-danger">Remove Appt</btn>
+</div>
+{{/each}}
+
+<script src="/js/deleteAppt.js"></script>
+
 {{!-- For Future development when a user selects tutor --}}
 
 {{!-- <div id="tutorsForUser">
