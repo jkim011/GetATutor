@@ -1,24 +1,34 @@
-<h1>What Subjects Are You Studying?</h1>
+<center>
 
+<h1 class="subject-heading">What Subjects Are You Studying?</h1>
 <form id="reSubjectList">
+    <div class="subject-container">
+        
+    <div class="subject-sub-container">
+        <input type="checkbox" id="reMath" >
+        <label for="reMath">Math</label>
+    </div>
 
-    <input type="checkbox" id="reMath" >
-    <label for="reMath">Math</label>
-    <br>
+    <div class="subject-sub-container">
+        <input type="checkbox" id="reScience">
+        <label for="reScience">Science</label>
+    </div>
 
-    <input type="checkbox" id="reScience">
-    <label for="reScience">Science</label>
-    <br>
-
-    <input type="checkbox" id="reHumanities">
-    <label for="reHumanities">Humanities</label>
-    <br>
-
-    <input type="checkbox" id="reCoding">
-    <label for="reCoding">Coding</label>
-    <br>
-
-    <button id="reSubmitSubject" type="submit" class="btn btn-primary">Submit</button>
+    <div class="subject-sub-container">
+        <input type="checkbox" id="reHumanities">
+        <label for="reHumanities">Humanities</label>
+    </div>
+ 
+    <div class="subject-sub-container">
+        <input type="checkbox" id="reCoding">
+        <label for="reCoding">Coding</label>
+    </div>
+    
+    <button id="reSubmitSubject" type="submit" class="btn submit-btn btn-primary">Submit</button>
+    </div>
 </form>
 
 <script src="/js/reChooseSubjects.js"></script>
+</center>
+
+
