@@ -1,5 +1,6 @@
-<h1>User: {{username}}</h1>
-<h2>Email: {{email}} </h2>
+<div class="profile">
+<h3>User: {{username}}</h3>
+<h5>Email: {{email}} </h5>
 <p>Subjects I'm Studying:</p>
 
 <div id="subjectListUser" class="">
@@ -16,7 +17,8 @@
         <p>Humanities</p>
         {{/if}}
 </div>
-<a href="/rechoose-subjects" id="reChooseSubjects">Pick New Subjects</a>
+<a href="/rechoose-subjects" class="pickSubject" id="reChooseSubjects">Pick New Subjects</a>
+</div>
 
 {{!-- For Future development when a user selects tutor --}}
 
