@@ -17,7 +17,7 @@ configTime = {
     altInput: true,
     minTime: "9:00",
     maxTime: "16",
-    defaultDate: "8:00",
+    defaultDate: "9:00",
 }
 const fpTime = flatpickr("#appt-time", configTime)
 
