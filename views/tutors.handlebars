@@ -1,91 +1,40 @@
-{{#each tutorList as |tutor| }}
-<div id = "tutorProfile">
-    <div id="tutorName" class="">
-        <h1>{{tutor.name}}</h1>
+<center>
+    <h1 class="tutors">Tutors:</h1>
+        
+    {{#each tutorList as |tutor| }}
+    <div class="card tutors">
+        <div id="tutorProfile" class="card-body">
+            <div id="tutorName" class="">
+                <h3 class="card-title">{{tutor.name}}</h3>
+            </div>
+
+            <div id="subjectList" class="">
+            
+                <h5 class="card-subtitle">Im Teaching:</h5>
+                {{#if subject.math}}
+                <h6>Math</h6>
+                {{/if}}
+                {{#if subject.science}}
+                <h6>Science</h6>
+                {{/if}}
+                {{#if subject.coding}}
+                <h6>Coding</h6>
+                {{/if}}
+                {{#if subject.humanities}}
+                <h6>Humanities</h6>
+                {{/if}}
+
+            </div>
+
+            <div id="profile" class="">
+                <p class="card-text">{{tutor.profile}}</p>
+            </div>
+
+            <div id = "email" class="">
+                <a href="mailto:{{tutor.email}}">{{tutor.email}}</a>
+            </div>
+
+        </div>
     </div>
-
-    <div id="subjectList" class="">
-       
-        <p>Im Teaching:</p>
-        {{#if subject.math}}
-        <p>Math</p>
-        {{/if}}
-        {{#if subject.science}}
-        <p>Science</p>
-        {{/if}}
-        {{#if subject.coding}}
-        <p>Coding</p>
-        {{/if}}
-        {{#if subject.humanities}}
-        <p>Humanities</p>
-        {{/if}}
-
-    </div>
-
-    <div id="profile" class="">
-        <p>{{tutor.profile}}</p>
-    </div>
-
-    <div id = "email" class="">
-        <a href="mailto:{{tutor.email}}">{{tutor.email}}</a>
-    </div>
-
-</div>
-{{/each}}
-
-{{!-- Scheduling forms --}}
-
-{{!-- For Future Development --}}
-
-{{!-- <div>
-    <h3>Schedule your tutoring session:</h3>
-    
-    <form id="schedule-session">
-        <label for="selected-subject">Select a Subject</label>
-        <select name="subject-choices" id="subject-choices">
-            <option value="Math">Math</option>
-            <option value="Science">Science</option>
-            <option value="Coding">Coding</option>
-            <option value="Humanities">Humanities</option>
-        </select>
-            <br>
-        <label for="selected-tutor">Select a Tutor</label>
-        <select name="tutor-choices" id="tutor-choices">
-            <optgroup label="Math">
-                <option value="Professor Xavier">Professor Xavier</option>
-            </optgroup>
-            <optgroup label="Science">       
-                <option value="Walter White">Walter White</option>
-                <option value="Professor Xavier">Professor Xavier</option>
-                <option value="Trinity Moss">Trinity Moss</option>
-            </optgroup>
-            <optgroup label="Coding">
-                <option value="Professor Xavier">Professor Xavier</option>
-                <option value="Trinity Moss">Trinity Moss</option>
-            </optgroup>
-            <optgroup label="Humanities">
-                <option value="John Keating">John Keating</option>
-            </optgroup>            
-        </select>
-            <br>
-        <label for="date">Select a date:</label>
-        <input type="date" id="date-choices" name="date"
-               min={{ current_date }} max={{ max_date }}/>
-            <br>
-        <label for="appt-time">Choose an session time (opening hours 9:00am to 6:00pm):</label>
-        <input id="appt-time" type="time" name="appt-time" min="09:00" max="18:00" value=""/>
-        <span class="validity"></span>
-            <br>
-        <button type="submit" class="btn" id="scheduleBtn">Submit</button>
-    </form>   
-</div>
-
-            {{!-- testing --}}
-<div>
-    <p id="appointmentSubject"></p>
-    <p id="appointmentTutor"></p>
-    <p id="appointmentDate"></p>
-    <p id="appointmentTime"></p>
-</div>
-
-<script src="/js/submit.js"></script> --}}
+    {{/each}}
+</center>

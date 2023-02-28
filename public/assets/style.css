@@ -85,6 +85,17 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     gap: 10px;
 }
 
+#scheduleBtn{
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 2px;
+  width: 8rem;
+}
+
+#scheduleBtn:hover{
+  background-color: rgb(201, 197, 197);
+}
+
 .tutor-tile-div{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -164,6 +175,16 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
 
 .scheduling-body{
     width: 20rem;
+}
+
+.tutors{
+    margin-bottom: 1rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+#tutorProfile{
+    text-align: center;
 }
 
 /* Media query for tablet screens */
