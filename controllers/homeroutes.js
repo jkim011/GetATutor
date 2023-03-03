@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Tutor, Subject, User} = require('../models');
+const {Tutor, Subject, User, Appointment} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -39,11 +39,14 @@ router.get('/profile', withAuth, async (req, res) => {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: {exclude: ['password']},
             //include subjects to study, potential tutors
-            include:[{model: Subject}]
+            include:[{model: Subject}, {model: Appointment}]
         });
         const userProfile = userData.get({plain:true})
        
-        console.log(userProfile)
+        console.log("Here is the user:", userProfile)
+        
+
+        
 
         res.render("profile", {
             ...userProfile,

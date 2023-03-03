@@ -85,16 +85,31 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     gap: 10px;
 }
 
+#scheduleBtn{
+  margin-left: auto;
+  margin-right: auto;
+  border: solid black 2px;
+  width: 8rem;
+}
+
+#scheduleBtn:hover{
+  background-color: rgb(201, 197, 197);
+}
+
 .tutor-tile-div{
     display: grid;
     grid-template-columns: 1fr 1fr;
     
 }
-
+/* .flex{
+  display: flex;
+  flex-direction: column;
+} */
 .customer-container{
     display: grid;
     grid-template-rows: 100px 1fr;
-    height: 35rem;
+    /* height: 55rem; */
+    margin-top: 35rem;
 }
 
 .customer-sub-container-2{
@@ -161,8 +176,30 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     display: grid;
 }
 
+.card{
+    width: 30rem;
+    align-items: center;
+}
+
+.scheduling-body{
+    width: 20rem;
+}
+
+.tutors{
+    margin-bottom: 1rem;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+#tutorProfile{
+    text-align: center;
+}
+
 /* Media query for tablet screens */
 @media only screen and (max-width: 768px) {
+    .child_container1{
+      margin-bottom: -8rem;
+    }
     .sub_child_container {
       top: 10rem;
       left: 2rem;
@@ -182,6 +219,9 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     }
     .calender-section {
       width: 100%;
+    }
+    .customer-container {
+      margin-top: 45rem;
     }
   }
   
@@ -221,6 +261,7 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
         height: 50vh;
         /* background-position: 70% 60%; */
         /* width: 100vw; */
+        margin-bottom: -10rem;
     }
     .customer-tile {
         height: auto;
@@ -284,4 +325,12 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
   .submit-btn{
     align-self: center;
     margin-top: 1rem;
+  }
+  .copyright{
+    background-color: lightblue;
+    margin-top: 10px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
