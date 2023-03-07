@@ -108,7 +108,7 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
 .customer-container{
     display: grid;
     grid-template-rows: 100px 1fr;
-    height: 35rem;
+    /* height: 55rem; */
     margin-top: 35rem;
 }
 
@@ -156,6 +156,14 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
 }
 .calender-container{
     height: 20rem;
+}
+.calendar-card {
+  min-height: 250px;
+  margin: 25px;
+  padding: 10px;
+  border: 1px solid rgba(207, 212, 222, 1);
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
 }
 .calender-section{
     display: grid;
@@ -270,6 +278,7 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
     }
   }
   
+ 
   .logoutNav{
     background-color: violet;
     border-radius: 15px;
@@ -316,4 +325,12 @@ box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.146);
   .submit-btn{
     align-self: center;
     margin-top: 1rem;
+  }
+  .copyright{
+    background-color: lightblue;
+    margin-top: 10px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
