@@ -20,21 +20,20 @@
 <a href="/rechoose-subjects" class="pickSubject" id="reChooseSubjects">Pick New Subjects</a>
 </div>
 
-<h2>My Appointments</h2>
+<h2 class="text-center">My Appointments</h2>
 
 
 
 
 {{#each appointments as |appointment|}}
-<div id ="apptContainer" class="">
+<div id ="apptContainer" class="profile">
 
     <div>
     <h4>Date: {{appointment.date}} Time: {{appointment.time}} </h4>
      <p>Subject: {{appointment.subject}}</p> 
      <p>Tutor: {{appointment.tutor}}</p> 
      
-        <p>Appointment ID:</p>
-        <p id="apptId">{{appointment.id}}</p>
+        <p id="apptId">Appointment ID: {{appointment.id}}</p>
     
    </div>
 <btn id="" type="click" class="deleteAppt btn btn-danger">Remove Appt</btn>
